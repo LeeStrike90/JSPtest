@@ -49,10 +49,10 @@
 					<td><%= rs.getInt("empno") %> </td>
 					<td><%= rs.getString("ename") %> </td>
 					<td><%= rs.getString("job") %> </td>
-					<td><%= rs.getInt("mgr") %> </td> 
+					<td><%= rs.getString("mgr") %> </td> 
 					<td><%= rs.getDate("hiredate") %> </td> 
 					<td><%= rs.getInt("sal") %> </td> 
-					<td><%= rs.getInt("comm") %> </td> 
+					<td><%= rs.getString("comm") %> </td> 
 					<td><%= rs.getInt("deptno") %> </td> 
 				</tr>
 				<%
