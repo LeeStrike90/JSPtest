@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.ResultSet"%>
@@ -7,6 +8,10 @@
     pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
+%>
+
+<%
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 %>
     <%!
     	Connection conn = null;
@@ -50,7 +55,7 @@
 					<td><%= rs.getString("ename") %> </td>
 					<td><%= rs.getString("job") %> </td>
 					<td><%= rs.getString("mgr") %> </td> 
-					<td><%= rs.getDate("hiredate") %> </td> 
+					<td><%= sdf.format(rs.getTimestamp("hiredate")) %></td>
 					<td><%= rs.getInt("sal") %> </td> 
 					<td><%= rs.getString("comm") %> </td> 
 					<td><%= rs.getInt("deptno") %> </td> 
